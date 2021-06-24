@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var end = moment(info.event.end).format('DD/MM/YYYY HH:mm');
       
       $.ajax({
-          url : 'http://localhost/calendar/ResizeDrop.php',
+          url : 'http://localhost/sistemaClinica/ResizeDrop.php',
           method: "POST",
           data : {id: id,dentista_id: dentista_id, starttime: starttime,endtime: endtime,startdate: startdate,enddata: enddata, start: start, end: end},
       });
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var end = moment(info.event.end).format('DD/MM/YYYY HH:mm');
       
       $.ajax({
-          url : 'http://localhost/calendar/ResizeDrop.php',
+          url : 'http://localhost/sistemaClinica/ResizeDrop.php',
           method: "POST",
           data : {id: id,dentista_id: dentista_id, starttime: starttime,endtime: endtime,startdate: startdate,enddata: enddata, start: start, end: end},
       });
@@ -132,18 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   calendar.render();
-  
-  // var items = document.getElementById('dentista_id');
-  // items.addEventListener('change', function(e){
-  //   if(e.target.id === 'dentista_id'){
-  //     // calendar.rerenderEvents();
-  //   console.log(dentista_id.valueOf($('#dentista_id').val()));
-  //   calendar.refetchEvents();
-  //   }else{
-  //     console.log('nao encontrado')
-  //   }
-    
-  // });
 
   // Initialize Pikaday
   var picker = new Pikaday({
@@ -174,13 +162,4 @@ $(document).ready(function(){
       $('#editar').slideToggle();
     });  
 });
-// $(document).ready(function(){
-//   $('#dentista_id').on('change', function(){
-//     // $('#Calendar').eventSource.refetch ();
-//     // calendar.render()
-//     $('#calendar').FullCalendar('rerender');
-//     //$('#calendar').calendar.rerenderEvents();
-//     // [info.event.dentista_id].indexOf($('#dentista_id').val()) >=0;
-//   });
-// });
 
