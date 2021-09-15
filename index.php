@@ -55,9 +55,9 @@ include_once("conexao.php");
     </ul>
   </div>
 </nav>
-<form >
-  <select  class="form-control corSelect" name="dentista_id" id="dentista_id">
-    <option selected>Selecione a agenda</option>
+<form>
+  <select name="dentistas" class="form-control corSelect" id="dentista_id">
+    <option value="All" selected>Selecione a agenda</option>
     <?php
         $query_dentistas = "SELECT * FROM dentistas";
         $resultado_dentistas = $conn->prepare($query_dentistas);
@@ -73,8 +73,7 @@ include_once("conexao.php");
   </select>
  
 </form>
-
-  <div id='calendar'></div>
+<div id='calendar'></div>
 <!-- modal cadastrar -->
 <div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="static">
   <div class="modal-dialog" role="document">

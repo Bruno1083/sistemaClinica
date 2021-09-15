@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
       $('#cadastrar').modal('show');          
     },
     eventClick: function(info) {
-      console.log(info.event);
       $('#visualizar #id').text(info.event.id);
       $('#visualizar #id').val(info.event.id);
       $('#visualizar #title').text(info.event.title);
@@ -71,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     // Salva o arraste das horas do evento
     eventResize : function(info) {
+      console.log(info);
       var id = info.event.id;
       var dentista_id = info.event.dentista_id;
       var starttime= moment(info.event.start).format('HH:mm');
@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // var opcaoTexto = items.options[items.selectedIndex].text;
         if(info.event.extendedProps.dentista_id == opcaoValor){
           info.event.setProp('display', 'block');
+          console.log(info);
         }else{
           info.event.setProp('display', 'none');
         }

@@ -1,6 +1,6 @@
 <?php
 include_once("conexao.php");
-
+// $dentistas = $_POST['dentistas'];
 $query_events = "SELECT id, title, color, start, procedimento, end, starttime, startdate, endtime, observacoes, dentista_id FROM events";
 $resultado_events = $conn->prepare($query_events);
 $resultado_events->execute();
