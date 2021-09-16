@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
       $('#cadastrar').modal('show');          
     },
     eventClick: function(info) {
+      $("#apagar_evento").attr("href", "apagar_evento.php?id=" + info.event.id);
       $('#visualizar #id').text(info.event.id);
       $('#visualizar #id').val(info.event.id);
       $('#visualizar #title').text(info.event.title);

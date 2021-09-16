@@ -299,6 +299,7 @@ include_once("conexao.php");
                   </div>
                   <div class="col-sm-4 margin">
                     <button id="alterar" type="button" class="btn btn-warning btn-toggle">Editar</button>
+                    <a href="" id="apagar_evento" class="btn btn-danger">Apagar</a>
                   </div>      
                 </div>
               </form>
